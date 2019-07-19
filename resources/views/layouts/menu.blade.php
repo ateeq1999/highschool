@@ -4,10 +4,10 @@
     <div class="main-menu-content" style="margin-top: 20%">
         <ul id="main-menu-navigation" data-menu="menu-navigation" class="navigation navigation-main">
             <li >
-                <a href="content/#"><i class="icon-home3"></i><span data-i18n="nav.page_layouts.main" class="menu-title">الرئيسية</span></a>
+                <a href="/#"><i class="icon-home3"></i><span data-i18n="nav.page_layouts.main" class="menu-title">الرئيسية</span></a>
             </li>  
             <li class=" nav-item">
-                <a href="content/#"><i class="icon-cog3"></i><span data-i18n="nav.content.main" class="menu-title"> إدارة المدرسة</span></a>
+                <a href="/#"><i class="icon-cog3"></i><span data-i18n="nav.content.main" class="menu-title"> إدارة المدرسة</span></a>
                 <ul class="menu-content">
                     <li><a href="content/add_class.php" data-i18n="nav.content.content_grid" class="menu-item">إضافة فصل دراسي </a>
                     </li>
@@ -16,16 +16,16 @@
                 </ul>
             </li>
             <li class=" nav-item">
-                <a href="content/#"><i class="icon-users3"></i><span data-i18n="nav.cards.main" class="menu-title">شؤون الموظفين</span></a>
+                <a href="/#"><i class="icon-users3"></i><span data-i18n="nav.cards.main" class="menu-title">شؤون الموظفين</span></a>
                 <ul class="menu-content">
-                    <li><a href="content/hirring.php" data-i18n="nav.cards.card_actions" class="menu-item"> توظيف جديد </a>
+                    <li><a href="/employee/create" data-i18n="nav.cards.card_actions" class="menu-item"> توظيف جديد </a>
                     </li>
-                <li><a href="content/show_employees.php" data-i18n="nav.cards.card_bootstrap" class="menu-item">عرض الموظفين </a>
+                <li><a href="/employee" data-i18n="nav.cards.card_bootstrap" class="menu-item">عرض الموظفين </a>
                 </li>
                 </ul>
             </li>
             <li class=" nav-item">
-                <a href="content/#"><i class="icon-users3"></i><span data-i18n="nav.advance_cards.main" class="menu-title">شؤون الطلاب</span></a>
+                <a href="/#"><i class="icon-users3"></i><span data-i18n="nav.advance_cards.main" class="menu-title">شؤون الطلاب</span></a>
                 <ul class="menu-content">
                 <li><a href="content/std_register.php" data-i18n="nav.cards.card_statistics" class="menu-item">تسجيل الطلاب</a>
                 </li>

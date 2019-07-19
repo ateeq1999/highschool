@@ -17,9 +17,12 @@
 Route::get('/', function () {
     return view('main');
 });
+
 Route::get('/about', function () {
     return view('about');
 });
+
+Route::resource('employee', 'EmployeeController');
 
 Auth::routes();
 

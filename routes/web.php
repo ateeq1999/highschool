@@ -11,8 +11,14 @@
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 Route::get('/', function () {
-    return view('welcome');
+    return view('main');
+});
+Route::get('/about', function () {
+    return view('about');
 });
 
 Auth::routes();

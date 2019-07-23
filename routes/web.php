@@ -23,6 +23,8 @@ Route::get('/about', function () {
 });
 
 Route::resource('employee', 'EmployeeController');
+Route::resource('student', 'StudentController');
+Route::resource('room', 'RoomController');
 
 Auth::routes();
 

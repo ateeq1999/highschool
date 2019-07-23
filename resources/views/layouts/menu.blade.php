@@ -9,9 +9,9 @@
             <li class=" nav-item">
                 <a href="/#"><i class="icon-cog3"></i><span data-i18n="nav.content.main" class="menu-title"> إدارة المدرسة</span></a>
                 <ul class="menu-content">
-                    <li><a href="content/add_class.php" data-i18n="nav.content.content_grid" class="menu-item">إضافة فصل دراسي </a>
+                    <li><a href="/room/create" data-i18n="nav.content.content_grid" class="menu-item">إضافة فصل دراسي </a>
                     </li>
-                    <li><a href="content/manage_class.php" data-i18n="nav.content.content_typography" class="menu-item">إدارة الفصول</a>
+                    <li><a href="/room" data-i18n="nav.content.content_typography" class="menu-item">إدارة الفصول</a>
                     </li>
                 </ul>
             </li>
@@ -27,9 +27,9 @@
             <li class=" nav-item">
                 <a href="/#"><i class="icon-users3"></i><span data-i18n="nav.advance_cards.main" class="menu-title">شؤون الطلاب</span></a>
                 <ul class="menu-content">
-                <li><a href="content/std_register.php" data-i18n="nav.cards.card_statistics" class="menu-item">تسجيل الطلاب</a>
+                <li><a href="/student/create" data-i18n="nav.cards.card_statistics" class="menu-item">تسجيل الطلاب</a>
                 </li>
-                <li><a href="content/std_manage.php" data-i18n="nav.cards.card_charts" class="menu-item">إدارة شؤون الطلاب</a>
+                <li><a href="/student" data-i18n="nav.cards.card_charts" class="menu-item">إدارة شؤون الطلاب</a>
                 </li>
                 </ul>
             </li>

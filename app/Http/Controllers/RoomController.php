@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Employee;
+use App\Room;
 use Illuminate\Http\Request;
 
-class EmployeeController extends Controller
+class RoomController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        $employees = Employee::all();
+        $rooms = Room::all();
 
-        return view('employee.index')->with('employees', $employees);
+        return view('room.index')->with('rooms', $rooms);
     }
 
     /**
@@ -26,7 +26,7 @@ class EmployeeController extends Controller
      */
     public function create()
     {
-        return view('employee.create');
+        return view('room.create');
     }
 
     /**
@@ -37,43 +37,41 @@ class EmployeeController extends Controller
      */
     public function store(Request $request)
     {
-        Employee::create(request()->all());
+        Room::create(request()->all());
 
-        return redirect('employee');
+        return redirect('/room');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Employee  $employee
+     * @param  \App\Room  $room
      * @return \Illuminate\Http\Response
      */
-    public function show(Employee $employee)
+    public function show(Room $room)
     {
-        return view('employee.show', compact('employee'));
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Employee  $employee
+     * @param  \App\Room  $room
      * @return \Illuminate\Http\Response
      */
-    public function edit(Employee $employee)
+    public function edit(Room $room)
     {
-        // dd($employee);
-
-        return view('employee.edit', compact('employee'));
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Employee  $employee
+     * @param  \App\Room  $room
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Employee $employee)
+    public function update(Request $request, Room $room)
     {
         //
     }
@@ -81,13 +79,11 @@ class EmployeeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Employee  $employee
+     * @param  \App\Room  $room
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Employee $employee)
+    public function destroy(Room $room)
     {
-        // $employee->delete();
-
-        return redirect('/employee');
+        //
     }
 }

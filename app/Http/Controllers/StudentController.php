@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Employee;
+use App\Student;
+use App\Room;
 use Illuminate\Http\Request;
 
-class EmployeeController extends Controller
+class StudentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +15,9 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        $employees = Employee::all();
+        $students = Student::all();
 
-        return view('employee.index')->with('employees', $employees);
+        return view('student.index')->with('students', $students);
     }
 
     /**
@@ -26,7 +27,9 @@ class EmployeeController extends Controller
      */
     public function create()
     {
-        return view('employee.create');
+        $rooms = Room::all();
+
+        return view('student.create')->with('rooms', $rooms);
     }
 
     /**
@@ -37,43 +40,41 @@ class EmployeeController extends Controller
      */
     public function store(Request $request)
     {
-        Employee::create(request()->all());
+        Student::create(request()->all());
 
-        return redirect('employee');
+        return redirect('/student');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Employee  $employee
+     * @param  \App\Student  $student
      * @return \Illuminate\Http\Response
      */
-    public function show(Employee $employee)
+    public function show(Student $student)
     {
-        return view('employee.show', compact('employee'));
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Employee  $employee
+     * @param  \App\Student  $student
      * @return \Illuminate\Http\Response
      */
-    public function edit(Employee $employee)
+    public function edit(Student $student)
     {
-        // dd($employee);
-
-        return view('employee.edit', compact('employee'));
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Employee  $employee
+     * @param  \App\Student  $student
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Employee $employee)
+    public function update(Request $request, Student $student)
     {
         //
     }
@@ -81,13 +82,11 @@ class EmployeeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Employee  $employee
+     * @param  \App\Student  $student
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Employee $employee)
+    public function destroy(Student $student)
     {
-        // $employee->delete();
-
-        return redirect('/employee');
+        //
     }
 }

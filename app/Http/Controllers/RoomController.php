@@ -50,7 +50,7 @@ class RoomController extends Controller
      */
     public function show(Room $room)
     {
-        //
+        return view('room.show')->with('room', $room);
     }
 
     /**
@@ -61,7 +61,7 @@ class RoomController extends Controller
      */
     public function edit(Room $room)
     {
-        //
+        return view('room.edit')->with('room', $room);
     }
 
     /**
@@ -73,7 +73,9 @@ class RoomController extends Controller
      */
     public function update(Request $request, Room $room)
     {
-        //
+        $room->update(request()->all());
+
+        return redirect('/room'.'/'.$room->id);;
     }
 
     /**
@@ -84,6 +86,8 @@ class RoomController extends Controller
      */
     public function destroy(Room $room)
     {
-        //
+        $room->delete();
+
+        return redirect('/room');
     }
 }

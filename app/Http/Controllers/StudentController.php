@@ -53,7 +53,7 @@ class StudentController extends Controller
      */
     public function show(Student $student)
     {
-        //
+        return view('student.show')->with('student', $student);
     }
 
     /**
@@ -64,7 +64,9 @@ class StudentController extends Controller
      */
     public function edit(Student $student)
     {
-        //
+        $rooms = Room::all();
+
+        return view('student.edit', compact('rooms'))->with('student', $student);
     }
 
     /**
@@ -76,7 +78,11 @@ class StudentController extends Controller
      */
     public function update(Request $request, Student $student)
     {
-        //
+        // dd($student);
+
+        $student->update(request()->all());
+
+        return redirect('/student'.'/'.$student->id);
     }
 
     /**
@@ -87,6 +93,8 @@ class StudentController extends Controller
      */
     public function destroy(Student $student)
     {
-        //
+        $student->delete();
+
+        return redirect('/student');
     }
 }

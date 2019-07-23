@@ -26,7 +26,9 @@ class EmployeeController extends Controller
      */
     public function create()
     {
-        return view('employee.create');
+        $employee = new Employee();
+
+        return view('employee.create')->with('employee', $employee);
     }
 
     /**
@@ -63,7 +65,7 @@ class EmployeeController extends Controller
     {
         // dd($employee);
 
-        return view('employee.edit', compact('employee'));
+        return view('employee.edit')->with('employee', $employee);
     }
 
     /**
@@ -75,7 +77,9 @@ class EmployeeController extends Controller
      */
     public function update(Request $request, Employee $employee)
     {
-        //
+        $employee->update(request()->all());
+
+        return redirect('/employee'.'/'.$employee->id);
     }
 
     /**
@@ -86,7 +90,7 @@ class EmployeeController extends Controller
      */
     public function destroy(Employee $employee)
     {
-        // $employee->delete();
+        $employee->delete();
 
         return redirect('/employee');
     }

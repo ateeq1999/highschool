@@ -34,11 +34,11 @@
                           <table class="table table-hover mb-0">
                               <thead>
                                   <tr>
-                                      <th>رقم </th>
-                                      <th>اسم الفصل </th>
-                                      <th>السنه الدراسيه</th>
-                                      <th>عدد الطلاب</th>
-                                      <th> إدارة</th>
+                                    <th>رقم </th>
+                                    <th>اسم الفصل </th>
+                                    <th>السنه الدراسيه</th>
+                                    <th>عدد الطلاب</th>
+                                    <th> إدارة</th>
                                   </tr>
                               </thead>
                               <tbody>
@@ -49,7 +49,7 @@
                                         <td>{{ $room->year }}</td>
                                         <td>{{ $room->students->count() }}</td>
                                         <td>
-                                          <a href="/class/{{ $room->id }}" type="button" class="btn btn-success btn-block">تفاصيل</a>
+                                          <a href="/room/{{ $room->id }}" type="button" class="btn btn-success btn-block">تفاصيل</a>
                                         </td>
                                     </tr>
                                 @endforeach

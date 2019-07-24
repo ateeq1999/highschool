@@ -25,6 +25,7 @@ Route::get('/about', function () {
 Route::resource('employee', 'EmployeeController');
 Route::resource('student', 'StudentController');
 Route::resource('room', 'RoomController');
+Route::resource('subject', 'SubjectController');
 
 Auth::routes();
 

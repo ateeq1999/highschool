@@ -34,11 +34,11 @@
                 </ul>
             </li>
             <li class=" nav-item">
-                <a href="content/#"><i class="icon-paperclip2"></i><span data-i18n="nav.advance_cards.main" class="menu-title"> المواد الدراسية</span></a>
+                <a href="/subject"><i class="icon-paperclip2"></i><span data-i18n="nav.advance_cards.main" class="menu-title"> المواد الدراسية</span></a>
                 <ul class="menu-content">
-                    <li><a href="content/add_subject.php" data-i18n="nav.cards.card_statistics" class="menu-item">إضافة مادة</a>
+                    <li><a href="/subject/create" data-i18n="nav.cards.card_statistics" class="menu-item">إضافة مادة</a>
                     </li>
-                    <li><a href="content/subject_to_class.php" data-i18n="nav.cards.card_charts" class="menu-item">إدراج مادة لفصل</a>
+                    <li><a href="/subject" data-i18n="nav.cards.card_charts" class="menu-item">إدراج مادة لفصل</a>
                     </li>
                 </ul>
             </li>

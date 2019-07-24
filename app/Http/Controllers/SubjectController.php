@@ -14,7 +14,13 @@ class SubjectController extends Controller
      */
     public function index()
     {
-        //
+        $subjects = Subject::all();
+
+        $year_one_subjects = Subject::where('studay_year', "الاولى")->get();
+        $year_tow_subjects = Subject::where('studay_year', "الثانيه")->get();
+        $year_three_subjects = Subject::where('studay_year', "الثالثه")->get();
+
+        return view('subject.index', compact('year_one_subjects','year_tow_subjects','year_three_subjects'))->with('subjects', $subjects);
     }
 
     /**
@@ -24,7 +30,7 @@ class SubjectController extends Controller
      */
     public function create()
     {
-        //
+        return view('subject.create');
     }
 
     /**
@@ -35,7 +41,9 @@ class SubjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Subject::create(request()->all());
+
+        return redirect('/subject');
     }
 
     /**
@@ -46,7 +54,7 @@ class SubjectController extends Controller
      */
     public function show(Subject $subject)
     {
-        //
+        return view('subject.show')->with('subject', $subject);
     }
 
     /**
@@ -57,7 +65,7 @@ class SubjectController extends Controller
      */
     public function edit(Subject $subject)
     {
-        //
+        return view('subject.edit')->with('subject', $subject);
     }
 
     /**
@@ -69,7 +77,9 @@ class SubjectController extends Controller
      */
     public function update(Request $request, Subject $subject)
     {
-        //
+        $subject->update(request()->all());
+
+        return redirect('/subject'.'/'.$subject->id);
     }
 
     /**
@@ -80,6 +90,8 @@ class SubjectController extends Controller
      */
     public function destroy(Subject $subject)
     {
-        //
+        $subject->delete();
+
+        return redirect('/subject');
     }
 }

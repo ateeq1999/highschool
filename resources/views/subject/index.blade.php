@@ -20,61 +20,6 @@
         </div>
       </div>
       </div>
-    <div class="row">
-        <div class="col-md-2"></div>	
-        <div class="col-md-12 ">
-            <div class="card">
-                <div class="card-body collapse in collapse in">
-                    <div class="card-block">
-                        <form class="form">
-                            <div class="form-body">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label for="projectinput5"> ألحق المادة </label>
-                                            <select id="projectinput5" name="interested" class="form-control">
-                                                <option value="none" selected="" started="" disabled=""> اسم المادة</option>
-                                                <option value="design">عربي</option>
-                                                <option value="development">انجليزي</option>
-                                                <option value="illustration">رياضيات</option>
-                                                <option value="design">علوم فيزياء</option>
-                                                <option value="development">علوم كيمياء</option>
-                                                <option value="illustration">جغرافيا</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label for="projectinput5">بالفصل</label>
-                                            <select id="projectinput5" name="interested" class="form-control">
-                                                <option value="none" selected="" disabled=""> العام</option>
-                                                <option value="design">أولى أ</option>
-                                                <option value="development">أولى ب</option>
-                                                <option value="illustration">ثانية أ</option>
-                                                <option value="development">ثانية ب</option>
-                                                <option value="illustration">ثالثة أ</option>
-                                                <option value="development">ثالثة ب</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group" style="margin-top:8%">
-                                            <button type="submit" class="btn btn-primary">
-                                                <i class="icon-check2"></i> حفظ
-                                            </button>
-                                            <button type="button" class="btn btn-warning mr-1">
-                                                <i class="icon-cross2"></i> إلغاء
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>	
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
       <div class="content-body">
         <div class="row">

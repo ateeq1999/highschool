@@ -43,12 +43,12 @@
                                 </div>
         
                                 <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                    <label for="email">البريد الالكتروني</label>
-                                    <input type="text" id="email" class="form-control" placeholder="البريد الالكتروني" name="email">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                        <label for="email">البريد الالكتروني</label>
+                                        <input type="text" id="email" class="form-control" placeholder="البريد الالكتروني" name="email">
+                                        </div>
                                     </div>
-                                </div>
                                 </div>
         
                                 <div class="row">
@@ -152,6 +152,16 @@
                                         </div>
                                     </div>
                                     </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <label for="funds"> الرسوم الدراسيه</label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">SDG</span>
+                                                <input type="number" class="form-control square" placeholder="بالجنيه" aria-label="Amount (to the nearest dollar)" name="funds">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
                                     <h4 class="card-title" ><i class="icon-clipboard4"></i>معلومات صحية عن الطالب</h4>
                                     <div class="row">
                                         <div class="col-md-12">

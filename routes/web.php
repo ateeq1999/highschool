@@ -26,6 +26,8 @@ Route::resource('employee', 'EmployeeController');
 Route::resource('student', 'StudentController');
 Route::resource('room', 'RoomController');
 Route::resource('subject', 'SubjectController');
+Route::resource('invoice', 'InvoiceController');
+Route::post('/invoice/create_tow', 'InvoiceController@create_tow');
 
 Auth::routes();
 

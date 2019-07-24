@@ -12,4 +12,9 @@ class Student extends Model
     {
         return $this->belongsTo(Room::class);
     }
+
+    public function invoices()
+    {
+        return $this->hasMany(Invoice::class);
+    }
 }

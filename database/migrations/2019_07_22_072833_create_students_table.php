@@ -24,6 +24,7 @@ class CreateStudentsTable extends Migration
             $table->string('birth_date');
             $table->string('studay_year');
             $table->string('year_of_study');
+            $table->string('funds');
             $table->string('spcial_desises')->default('لايوجد');
             $table->string('spcial_case');
             $table->string('responser_full_name');

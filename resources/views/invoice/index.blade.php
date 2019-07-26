@@ -63,7 +63,7 @@
                                             <td>
                                                 <ul class="pl-0 list-unstyled">
                                                     <li class="mb-1">
-                                                        <button type="button" class="btn btn-success btn-block"> تفاصيل </button>
+                                                        <a class="btn btn-success" href="/invoice/{{ $invoice->id }}">التفاصيل</a>
                                                     </li>
                                                 </ul>
                                             </td>

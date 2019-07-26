@@ -43,7 +43,7 @@
                 </ul>
             </li>
             <li class=" nav-item">
-                <a href="content/accounting.php"><i class="icon-cash"></i><span data-i18n="nav.project.main" class="menu-title">الحسابات</span></a>
+                <a href="/invoice"><i class="icon-cash"></i><span data-i18n="nav.project.main" class="menu-title">الحسابات</span></a>
             </li>
             <li class=" nav-item">
                 <a href="content/#"><i class="icon-document-text"></i><span data-i18n="nav.components.main" class="menu-title">التقارير</span></a>

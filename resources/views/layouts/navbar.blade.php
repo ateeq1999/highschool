@@ -23,7 +23,14 @@
                 {{-- <span class="user-name">{{ Auth::user()->name }}</span> --}}
             </a>
             <div class="dropdown-menu dropdown-menu-right"><a href="#" class="dropdown-item"><i class="icon-head"></i>تعديل الحساب</a>
-                <div class="dropdown-divider"></div><a href="#" class="dropdown-item"><i class="icon-power3"></i> تسجيل الخروج</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{{ route('logout') }}" 
+                    onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">
+                    <i class="icon-power3"></i> تسجيل الخروج</a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
             </div>
             </li>
         </ul>

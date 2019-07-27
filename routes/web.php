@@ -11,24 +11,25 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 Route::get('/', function () {
-    return view('main');
+    return view('welcome');
 });
+
+Auth::routes();
 
 Route::get('/about', function () {
     return view('about');
 });
 
-Route::resource('employee', 'EmployeeController');
-Route::resource('student', 'StudentController');
-Route::resource('room', 'RoomController');
-Route::resource('subject', 'SubjectController');
-Route::resource('invoice', 'InvoiceController');
-Route::post('/invoice/create_tow', 'InvoiceController@create_tow');
+Route::get('/home', function () {
+    return view('main');
+})->name('home')->middleware('auth');
 
-Auth::routes();
+Route::resource('employee', 'EmployeeController')->middleware('auth');
+Route::resource('student', 'StudentController')->middleware('auth');
+Route::resource('room', 'RoomController')->middleware('auth');
+Route::resource('subject', 'SubjectController')->middleware('auth');
+Route::resource('invoice', 'InvoiceController')->middleware('auth');
+Route::post('/invoice/create_tow', 'InvoiceController@create_tow')->middleware('auth');
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');

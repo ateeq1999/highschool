@@ -25,6 +25,7 @@ Route::get('/home', function () {
     return view('main');
 })->name('home')->middleware('auth');
 
+Route::resource('user', 'UserController')->middleware('auth');
 Route::resource('employee', 'EmployeeController')->middleware('auth');
 Route::resource('student', 'StudentController')->middleware('auth');
 Route::resource('room', 'RoomController')->middleware('auth');
@@ -32,4 +33,5 @@ Route::resource('subject', 'SubjectController')->middleware('auth');
 Route::resource('invoice', 'InvoiceController')->middleware('auth');
 Route::post('/invoice/create_tow', 'InvoiceController@create_tow')->middleware('auth');
 
+// Route::get('/home', 'HomeController@index')->name('home');
 // Route::get('/home', 'HomeController@index')->name('home');
